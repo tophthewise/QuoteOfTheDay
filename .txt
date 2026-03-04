@@ -1,0 +1,4 @@
+This project is designed to document quotes that pop up in your daily life that you just need to write down.
+The intended user is an aspiring creative, who need organization for moments of inspiration. 
+They will be able to sign up for an account, add a quote to your quote log, and review your previous quotes. 
+
