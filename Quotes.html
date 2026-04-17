@@ -3,6 +3,8 @@
 <Head>
     <title>Quote of the Day</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="./scripts/Quotes.js"></script>
+
 </Head>
 <body>
 <nav >
@@ -18,15 +20,16 @@
     </div>
     <hr/>
         <div class="center">
-            <form action="register.php" method="post">
+            <form id="quoteSub">
         
         
          
         <label for="quote">Quote:</label>
         <input type="text" id="quote" name="quote" required><br><br>
         
-        <input type="submit" value="Register">
+        <input   type="submit" value="Register" onclick="checkboxClick(event)">
     </form>
+    <ul id="output-box"></ul>
 </div>
 </body>
 
