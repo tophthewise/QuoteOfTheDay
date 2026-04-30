@@ -1,0 +1,36 @@
+{
+  "name": "quoteoftheday",
+  "version": "1.0.0",
+  "description": "an app to bring inspirational joy via quotes",
+  "keywords": [
+    "fullstack",
+    "Express",
+    "Node",
+    "JS"
+  ],
+  "homepage": "https://github.com/tophthewise/QuoteOfTheDay#readme",
+  "bugs": {
+    "url": "https://github.com/tophthewise/QuoteOfTheDay/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tophthewise/QuoteOfTheDay.git"
+  },
+  "license": "ISC",
+  "author": "Eric Porter",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
