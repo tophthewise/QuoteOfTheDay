@@ -6,6 +6,7 @@ const app = express()
 app.use(express.json())
 
 const userRoutes = require("./server/routes/user")
+const quoteRoutes = require("./server/routes/quote")
 
 //CORS middleware
 app.use(function(req, res, next) {
@@ -19,7 +20,7 @@ app.use(function(req, res, next) {
 // app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/public/login.html')))
 
 app.use("/user", userRoutes)
-
+app.use("/quote", quoteRoutes) 
 // instead of having a domain name like, www.bestrecipes.com, 
 // we are using localhost:3000 (3000 is in our .env file which is not accessible.)
 
