@@ -1,17 +1,18 @@
 let submitForm2  = document.querySelector("#loginForm");
 
 submitForm2.addEventListener("submit", displayInput);
-function User(firstname, lastname, username, password) {
+function User(firstname, lastname, username, password, email) {
   this.firstName = firstname;
   this.lastName = lastname;
   this.username = username;
   this.password = password;
+  this.email = email;
 }
 function displayInput(e) {
 console.log("Button was clicked");
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
-  const user = new User(null, null, username, password);
+  const user = new User(null, null, username, password, null);
   fetch("/user/login", {
     method: "POST",
     headers: {
@@ -28,7 +29,8 @@ console.log("Button was clicked");
   const lastname = document.getElementById("lastname").value;
     const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
-const user = new User(firstname, lastname, username, password);
+  const email = document.getElementById("email").value;
+const user = new User(firstname, lastname, username, password, email);
   fetch("/user/register", {
     method: "POST",
     headers: {
