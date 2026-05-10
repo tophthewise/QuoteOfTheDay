@@ -1,12 +1,12 @@
 require('dotenv').config();
 const express = require("express")
 const app = express()
-// const path = require("path")
+const path = require("path")
 
 app.use(express.json())
 
-const userRoutes = require("./server/routes/user")
-const quoteRoutes = require("./server/routes/quote")
+const userRoutes = require("./Server/routes/user")
+const quoteRoutes = require("./Server/routes/quote")
 
 //CORS middleware
 app.use(function(req, res, next) {
@@ -16,8 +16,10 @@ app.use(function(req, res, next) {
   next();
 });
 
-// app.use(express.static(__dirname + "/public"))
-// app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/public/login.html')))
+app.use(express.static(path.join(__dirname, 'Public')))
+app.get('/', (req, res) => {
+    res.sendFile('Public/login.html', { root: __dirname });
+})
 
 app.use("/user", userRoutes)
 app.use("/quote", quoteRoutes) 
