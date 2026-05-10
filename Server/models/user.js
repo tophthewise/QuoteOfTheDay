@@ -73,4 +73,13 @@ async function register(user) {
   return await login(user)
 }
 
-module.exports = { getAllUsers, login, register }
+async function deleteUser(userId) {
+  let sql = `
+    DELETE FROM User
+    WHERE userId = ?
+  `
+  await con.query(sql, [userId])
+  return { success: true, message: "User deleted" }
+}
+
+module.exports = { getAllUsers, login, register, deleteUser }

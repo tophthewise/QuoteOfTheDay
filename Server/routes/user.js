@@ -30,4 +30,13 @@ router
     }
 })
 
+.delete('/delete', async (req, res) => {
+    try {
+        const result = await User.deleteUser(req.body.userId)
+        res.send(result)
+    } catch(err) {
+        res.status(401).send({message: err.message})
+    }
+})
+
 module.exports = router
