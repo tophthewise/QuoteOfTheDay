@@ -2,8 +2,8 @@ let submitForm2  = document.querySelector("#loginForm");
 
 submitForm2.addEventListener("submit", displayInput);
 function User(firstname, lastname, username, password) {
-  this.firstname = firstname;
-  this.lastname = lastname;
+  this.firstName = firstname;
+  this.lastName = lastname;
   this.username = username;
   this.password = password;
 }
